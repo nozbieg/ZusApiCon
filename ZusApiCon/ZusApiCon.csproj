@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AppLogins.cs" />
+    <Compile Include="Classes\SerializeModel.cs" />
     <Compile Include="Connected Services\zusApi\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
