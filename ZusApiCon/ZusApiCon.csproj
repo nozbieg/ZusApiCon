@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA22BC88-A705-4B07-A12D-F2EC222BADE2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ZusApiCon</RootNamespace>
+    <AssemblyName>ZusApiCon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\zusApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\zusService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\zusApi\zla.wsdl" />
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_AdresyPlacowek.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_CzlonekRodzinyUbezpieczonego.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_DaneAsystenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_KEDU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_kmdk_Lekarz_DanePelne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_kmdk_MiejsceWykonywaniaZawodu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_kmdk_RezultatWysylkiPakietu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_kmdk_Ubezpieczony.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_KodPokrewienstwa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_LekarzAsystenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_NumerStatystycznyChoroby.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_ParaDokumentowZla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_Platnik.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_Platnik_Ubezpieczonego.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_PowiazaneZla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_Przyczyny.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_Rezultat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_RezultatWalidacji.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_SeriaNumerZla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_StatusDruku.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_UPP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_UprawnienieAsystentaDoMiejsca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_WeryfikacjaAkcjiZla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_WniosekPr4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_WynikNotyfikacjiPlatnik.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_ZaswiadczenieLekarskie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_ZaswiadczenieLekarskieDanePelne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.docTypeRef_ZaswiadczenieLekarskieKsiKorygujace.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.Kom_PobierzSeriaNumerZla_Wy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.nadajSeriaNumerZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.notyfikujAnulowanieZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzAdresyPlacowekResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzCzlonkowRodzinyUbezpieczonegoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzDaneAsystentowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzDaneLekarzaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzDanePlatnikaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzDaneUbezpieczonegoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzDokumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzIdentyfikatorDokumentuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzKodChorobyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListeBiezacychZlaLekarzaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListeLekarzyAsystentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListePowiazanychZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListePr4UbezpieczonegoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListePrzetworzonychZlaLekarzaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzListeZlaUbezpieczonegoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzLiterowyKodChorobyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzMiejsceWykonywaniaZawoduResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzOpisChorobyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzOswiadczenieResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzPlatnikowUbezpieczonegoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSeriaNumerZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSlownikKodowPokrewienstwaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSlownikPrzyczynAnulowaniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSlownikPrzyczynUniewaznieniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzStatusyDrukowZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSzczegolyZlaBiezaceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzSzczegolyZlaPrzetworzoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzUppDlaDokumentuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzUprawnieniaAsystentaDoMiejscResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.pobierzUprawnieniaNaDzienResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.przywrocUprawnienieAsystentaDoMiejscaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.rezerwujSeriaNumerZlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.sprawdzMozliwoscAnulowaniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.sprawdzMozliwoscElektronizacjiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.sprawdzMozliwoscUniewaznieniaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.sprawdzProfilRehabilitacjiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.usunSesjeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.usunUprawnienieAsystentaDoMiejscaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.walidujDokumentyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.walidujWniosekResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.wyslijDokumentyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.wyslijWniosekResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\zusApi\ZusApiCon.zusApi.zalogujPodpisemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_AdresyPlacowek.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_CzlonekRodzinyUbezpieczonego.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_DaneAsystenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_KEDU.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_kmdk_Lekarz_DanePelne.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_kmdk_MiejsceWykonywaniaZawodu.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_kmdk_RezultatWysylkiPakietu.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_kmdk_Ubezpieczony.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_KodPokrewienstwa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_LekarzAsystenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_NumerStatystycznyChoroby.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_ParaDokumentowZla.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_Platnik.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_Platnik_Ubezpieczonego.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_PowiazaneZla.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_Przyczyny.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_Rezultat.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_RezultatWalidacji.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_SeriaNumerZla.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_StatusDruku.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_UPP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_UprawnienieAsystentaDoMiejsca.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_WeryfikacjaAkcjiZla.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_WniosekPr4.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_WynikNotyfikacjiPlatnik.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_ZaswiadczenieLekarskie.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_ZaswiadczenieLekarskieDanePelne.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\docTypeRef_ZaswiadczenieLekarskieKsiKorygujace.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\Kom_PobierzSeriaNumerZla_Wy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\zusService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\zusService\zla.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://pue.zus.pl:8001/ws/zus.channel.gabinetoweV2:zla%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\zusService\</RelPath>
+      <UpdateFromURL>https://pue.zus.pl:8001/ws/zus.channel.gabinetoweV2:zla%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ZusApiCon_zusService_zus_channel_gabinetoweV2_zla</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\zusApi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\zusApi\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\zusApi\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\zusApi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
