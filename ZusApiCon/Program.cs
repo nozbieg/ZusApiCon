@@ -26,7 +26,7 @@ namespace ZusApiCon
             SerializeModule(ret);
         }
 
-        public static void SerializeModule(string ret) //Metoda Deserialuzująca dane do obiektów i przygotowująca do wprowadzenia do bazy danych + Wyświetla Nazwe i nip w konsoli
+        public static void SerializeModule(string ret) //Metoda Deserialuzująca dane do obiektów i przygotowująca do wprowadzenia do bazy danych 
         {
             XmlRootAttribute xRoot = new XmlRootAttribute();
             xRoot.ElementName = "Oswiadczenie";
